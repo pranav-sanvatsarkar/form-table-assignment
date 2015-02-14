@@ -6,12 +6,14 @@
     <script src="../vendor_js/angular/angular.min.js"></script>
     <script src="assignment-app.js"></script>
     <script src="enzi-table.js"></script>
+    <script src="enzi-form.js"></script>
     <script language="javascript">
         var application_js = '';
     </script>
     <link href="../vendor_css/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body ng-app="assignment-app" ng-controller="appController">
+    <button class="btn btn-primary" value="Create new record" ng-click="CreateRecord()">Create new record</button>
     <div enzi-table="" columns="columns" records="records" fields="fields" ondelete="DeleteRecord(record, onsuccess)" onedit="EditRecord(record, onsuccess)"></div>
 </body>
 </html>

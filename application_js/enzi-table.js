@@ -29,28 +29,60 @@
             var row = '';
             $scope.editor = {};
             angular.forEach($scope.columns, function (column) {
-                row += '<td id="' + $scope.record.Id + '_' + column.name + '" ng-click="onedit(\'' + column.name + '\')"><span ng-hide="editor.' + column.name + '">' + column.template + '</span></td>';
+                row += '<td id="' + $scope.record.Id + '_' + column.name + '" ng-dblclick="onedit(\'' + column.name + '\')"><span ng-hide="editor.' + column.name + '">' + column.template + '</span></td>';
             })
             $element.append($compile(angular.element(row))($scope));
 
             $scope.onedit = function (columnName) {
                 if (!$scope.editor[columnName]) {
-                    $scope.editor[columnName] = true;
                     var column = $scope.columnsmap[columnName];
-                    var editFields = column.editFields.split(',');
-                    if (editFields.length == 1) {
-                        $element.find('#' + $scope.record.Id + '_' + columnName).append($compile('<span enzi-field="' + editFields[0] + '"></span>')($scope));
-                    }
-                    else {
-                        var inputs = '';
-                        angular.forEach(editFields, function (fieldName) {
-                            inputs += '<span enzi-field="' + fieldName + '"></span>';
-                        })
-                        inputs += '';
-                        $element.find('#' + $scope.record.Id + '_' + columnName).append($compile(inputs)($scope));
+                    if (column.editFields) {
+                        $scope.editor[columnName] = true;
+                        var editFields = column.editFields.split(',');
+                        if (editFields.length == 1) {
+                            $element.find('#' + $scope.record.Id + '_' + columnName).append($compile('<span enzi-field="' + editFields[0] + '"></span>')($scope));
+                        }
+                        else {
+                            $scope.oldRecord = {};
+                            angular.forEach(editFields, function (field) {
+                                $scope.oldRecord[field.trim()] = $scope.record[field.trim()];
+                            });
+                            var inputs = '<div class="modal fade in" style="display:block;" id="addressForm">\
+                                <div class="modal-dialog">\
+                                <div class="modal-content">\
+                                    <div class="modal-header">\
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="closeDialog(\'' + columnName + '\',\'addressForm\')">×</button>\
+                                    <h4 class="modal-title">Address</h4>\
+                                    </div>\
+                                    <div class="modal-body">';
+                            angular.forEach(editFields, function (fieldName) {
+                                inputs += '<span enzi-field="' + fieldName + '"></span>';
+                            })
+                            inputs += '   </div>\
+                                    <div class="modal-footer">\
+                            <button class="btn btn-primary" ng-click="saveRecord(\'' + columnName + '\',\'addressForm\')">Save</button></div>\
+                            </div>\
+                            </div>\
+                            </div>';
+                            $element.find('#' + $scope.record.Id + '_' + columnName).append($compile(inputs)($scope));
+                        }
                     }
                         
                 }
+            }
+            $scope.saveRecord = function (columnName, elementId) {
+                $('#' + elementId).remove();
+                $scope.editor[columnName] = false;
+            }
+            $scope.closeDialog = function (columnName, elementId) {
+                var column = $scope.columnsmap[columnName];
+                if (column.editFields) {
+                    angular.forEach(column.editFields.split(','), function (field) {
+                        $scope.record[field.trim()] = $scope.oldRecord[field.trim()];
+                    });
+                }
+                $('#' + elementId).remove();
+                $scope.editor[columnName] = false;
             }
 
             $scope.updateField = function (columnName) {
