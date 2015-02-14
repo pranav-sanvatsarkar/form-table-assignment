@@ -1,0 +1,576 @@
+body {
+	font-family: arial;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100% 110%;
+	background-image:
+		url("img/backgroundImage.png");
+	font-size: 11px;
+	overflow-y: scroll;	
+}
+.afterload{
+	display: none;
+}
+table td, table a{
+	color: rgb(15, 137, 177);
+}
+.wrapper{
+	background-color: white;
+	margin: 2%;
+	padding-bottom: 2%;
+	border-radius: 10px;
+} 
+
+.grid {
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	border: solid 1px #000000;
+	background-color: #ffffff;
+	font-size: 12px;
+	font-weight: bold;
+	position: relative;
+}
+
+.gridHeader {
+	left: 0px;
+	background: #ffffff;
+	z-index: 50;
+	position: fixed;
+}
+
+#imgLogo {
+	padding: 0px 0px 0px 0px;
+	border: none;
+}
+
+.gridBody {
+	
+}
+
+.unit {
+	min-width: 60px;
+	width: 60px;
+	border: solid 1px #000000;
+	text-align: center;
+	height: 18px;
+}
+
+.unit_type_name {
+	white-space: nowrap;
+	overflow: hidden;
+	word-wrap: break-word;
+	width: 205px;
+	display: inline-block;
+
+}
+
+.unitType {
+	min-width: 60px;
+	width: 60px;
+	border: solid 1px #000000;
+	text-align: center;
+	height: 18px;
+	color: rgb(117, 136, 148);	
+}
+.unitnameblank{
+	border: solid 1px #000000;
+	min-width: 210px;
+	width: 210px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(255, 255, 255);
+}
+
+#divUnitInfo .fielddata {
+	word-break: break-all;
+}
+.unitname {
+	border: solid 1px #000000;
+	min-width: 210px;
+	width: 210px;
+	color: rgb(255, 255, 255);
+	background-color: #66a7dd;	
+}
+
+.unitnameoffline{
+	border: solid 1px #000000;
+	min-width: 210px;
+	width: 210px;
+	background-color: #a3856b;
+	color: rgb(255, 255, 255);
+}
+
+.date {
+	border: solid 1px #000000;
+	text-align: center;
+	min-width: 60px;
+	width: 60px;
+	height: 18px;
+	color: rgb(255, 255, 255);
+	background-color: #66a7dd;
+}
+
+.RVlink{
+	color: rgb(252, 153, 5);
+}
+
+#divRVGrid {
+	border-radius: 5px;
+}
+
+#rowCalendarBar {
+	height: 50px;
+	background: linear-gradient(to bottom, #e7f9ff 0%, #d3e4e9);
+}
+
+.unitrow {
+	border: solid 1px #000000;
+	height: 16px;
+}
+
+.unitinfo {
+	background-image:
+		url("img/info.png");
+	float: right;
+	height: 15px;
+	width: 15px;
+	background-size: 15px 15px;
+}
+
+.datesrow {
+	border: solid 1px #000000;
+}
+
+.calendarbar {
+	position: relative;
+	top: 10px;
+	left: 50%;
+	margin-left: -155px;
+	display: inline-block;
+}
+
+.resultsPanel{
+	z-index: 200;
+	cursor: pointer;
+	max-height: 600px;
+	overflow: auto;
+}
+
+.agentname
+{
+	font-size: 13px;
+	font-weight: bold;
+	color: #0b5592;
+	float: right;
+	display: inline-block;
+	padding-top: 0px;
+	padding-right: 10px;
+}
+.calendarbutton {
+	width: 25px;
+	height: 24px;
+	background: no-repeat;
+	border-width: 0;
+	margin-bottom: 7px;
+	margin-left: 12px;
+	cursor: pointer;
+}
+
+.daynext {
+	background-image:
+		url("img/DayNext.png");
+}
+
+.monthnext {
+	background-image:
+		url("img/MonthNext.png");
+}
+
+.yearnext {
+	background-image:
+		url("img/YearNext.png");
+}
+
+.dayprev {
+	background-image:
+		url("img/DayPrevious.png");
+}
+
+.monthprev {
+	background-image:
+		url("img/MonthPrevious.png");
+}
+
+.yearprev {
+	background-image:
+		url("img/YearPrevious.png");
+}
+
+.showcal {
+	background-image:
+		url("img/calendar.png");
+	margin: 0 10px 0 20px;
+	background-size: 25px;
+}
+
+#divReservations {
+	background-color: white;
+}
+
+.reservation {
+	position: absolute;
+	height: 16px;
+	text-align: center;
+	border: solid 1px rgb(206, 206, 206);
+	border-radius: 4px;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+	margin-top: -1px;
+	padding-top: 2px;
+}
+
+.continuefromleft{
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.continuetoright{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.reservation.service {
+	//background-color: #599FEB;
+	background-color: rgb(219, 192, 204);
+	z-index: 10;
+}
+
+.reservation.pencilin {
+	//background-color: #c0e3eb;
+	background-color: rgb(219, 114, 190); 
+	z-index: 10; 
+}
+
+.reservation.active {
+	//background-color: #7fe97f; 
+	background-color: #48a8f4; 
+	z-index: 10;
+}
+
+.reservation.checkedin {
+	//background-color: #0AC40A;
+	background-color: rgb(62, 226, 62);
+	z-index: 10;  
+}
+
+.reservation.checkedout {
+	background-color: #D8EB75; 
+	z-index: 10;
+}
+
+.reservation.waitlisted {
+	background-color: #d3e4e9;
+	border: solid 1px;
+}
+
+.reservation.requested {
+	background-color: yellow;
+}
+
+.blackspan.service { background-color: rgb(219, 192, 204);}
+.blackspan.pencilin { background-color: rgb(219, 114, 190); }
+.blackspan.active {	background-color: #48a8f4; }
+.blackspan.checkedin {	background-color: rgb(62, 226, 62);}
+.blackspan.checkedout {	background-color: #D8EB75; }
+.blackspan.waitlisted {	background-color: #d3e4e9;}
+.blackspan.requested {	background-color: yellow;}
+
+.divAutocomplete{
+	position: fixed;
+	z-index:100;
+	background-image:
+		url("img/backgroundImage.png");
+    text-align:left;
+    margin-bottom:1%;
+    width: 100%
+}
+
+.detailsPanel{
+	z-index: 100;
+}
+
+#right-sidebar{
+    width:17%;
+    height:100%;
+    top:0;
+    border-left: 1px solid #cecece;
+    overflow:hidden;
+    display: inline-block;
+    vertical-align: top;
+ 	padding-right: 26px;
+}
+
+#right-sidebar-angular{
+    width:17%;
+    height:100%;
+    top:0;
+    border-left: 1px solid #cecece;
+    overflow:hidden;
+    display: inline-block;
+    vertical-align: top;
+ 	padding-right: 26px;
+}
+.buttonMemberInfo{
+    background-clip: padding-box; 
+    text-transform: uppercase; 
+    -webkit-border-radius: 3px; 
+    border-radius: 3px; 
+    cursor: pointer; 
+    display: block; 
+    text-decoration: none; 
+    width: 8px;
+    position: relative;
+    height: 20PX;
+    padding-top: 10PX;
+    text-decoration: initial;
+}
+#memberinfolable{
+    display: inline-block;
+    position: absolute;
+	left: 89%;
+	top: 140px;
+}
+#fullmemberinfolable{
+    display: inline-block;
+    position: absolute;
+	left: 89%;
+	top: 178px;
+}
+#memberinfolableangular{
+    display: inline-block;
+    position: absolute;
+	left: 89%;
+	top: 140px;
+}
+#fullmemberinfolableangular{
+    display: inline-block;
+    position: absolute;
+	left: 89%;
+	top: 178px;
+}
+#RVmemberinfolable{
+    display: inline-block;
+    position: absolute;
+	left: 90%;
+	top: 140px;
+}
+#fullRVmemberinfolable{
+ 	display: inline-block;
+    position: absolute;
+	left: 90%;
+	top: 178px;
+}
+#RVright-sidebar{
+    //position:absolute;
+    width:17%;
+    height:100%;
+    top:0;
+    border-left: 1px solid #cecece;
+    overflow:hidden;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 26px;
+}
+.jsFiddleForReport{
+ 	position:fixed;     
+    top: 5px;      
+    right:500px;                  
+    overflow:hidden;
+    cursor: pointer;
+    z-index: 101;
+}
+.ReportData{
+    position:fixed;
+    width:20%;  
+    height: 0%;    
+    top: 5px;  
+    right:500px;
+    background:#ffffff;
+    border: 1px solid black;
+    border-top: 0;
+    border-bottom: 0;
+    overflow:hidden;
+    overflow-y: auto;
+    z-index: 101;
+}
+.jsFiddleForLegend{
+   	position:fixed;      
+    top: 5px;     
+    right:400px;                  
+    overflow:hidden;
+    cursor: pointer;
+    z-index: 101;
+}
+.LegendData{
+    position:fixed; 
+    width:20%;  
+    height: 0%;    
+    top: 5px;  
+    right:400px;
+    background:#ffffff;
+    border: 1px solid black;
+    border-top: 0;
+    border-bottom: 0;
+    overflow:hidden;
+    overflow-y: auto;
+    z-index: 101;
+}
+.blackspan{
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+.jsFiddleForSetup{
+    position:fixed;       
+    top: 5px;      
+    right:300px;                  
+    overflow:hidden;
+    cursor: pointer;
+    z-index: 101;
+}
+.jsFiddleForRefresh{
+    position:fixed;       
+    top: 5px;      
+    right:200px;                  
+    overflow:hidden;
+    cursor: pointer;
+    z-index: 101;
+}
+.jsFiddleForLogout
+{
+	position:fixed;       
+    top: 5px;      
+    right:100px;                  
+    overflow:hidden;
+    cursor: pointer;
+    z-index: 101;
+}
+.TdReservationType
+{
+	padding-left: 40px;
+}
+.hasDatepicker{ z-index: 50;}
+.pbButtonb{	text-align: center;}
+ul li, ol li { margin-left: 0.5em;}
+
+.headerTdRow{ height: 22px; }
+.ui-datepicker-header{
+    background: #5c9ccc;
+    color: rgb(252, 252, 252);
+}
+.pbSubheader{ background: -webkit-linear-gradient(top, #83bce7 0%,#4d86c9 100%); }
+.apexp .detailList .list .headerRow th{ background: -webkit-linear-gradient(top, #83bce7 0%,#4d86c9 100%);}
+tr.headerRow th{ background: -webkit-linear-gradient(top, #83bce7 0%,#4d86c9 100%);}
+body .bPageBlock .detailList tr td, body .bPageBlock .detailList tr th, body table.list tr td, body table.list tr th, body .hoverDetail .bPageBlock .detailList tr td, body .hoverDetail .bPageBlock .detailList tr th{ 
+	border-color: rgb(124, 120, 120);
+}
+body .bPageBlock, body #bodyCell .bResource .secondaryPalette, body .secondaryPalette.bPageBlock, body .individualPalette .secondaryPalette.bPageBlock, body .bodyDiv .genericTable, body .genericPageBlockTable, body .bodyDiv .bSubBlock, body .bComponentBlock .bPageBlock, body .bMyDashboard .bPageBlock, body.rlHoverFrame .bPageBlock, body.subjectSelectionPopup div.choicesBox, body.lookupTab .secondaryPalette.bPageBlock, body.popupTab .secondaryPalette.bPageBlock, body.UserTagStatsPage .secondaryPalette.bPageBlock{ 
+	//border-top: 1px solid #eaeaea;
+}
+body .pbBody table.list tr.headerRow th{
+    color: white;
+    background: -webkit-linear-gradient(top, #83bce7 0%,#4d86c9 100%);
+}
+.bPageBlock .dataCol{ font-size: 11px;}
+.bPageBlock .labelCol{ font-size: 11px;}
+.apexp .bPageBlock .detailList {font-size: 11px;}
+.apexp .bPageBlock.apexDefaultPageBlock .pbBody .pbSubheader {font-size: 11px;}
+.apexp {font-size: 11px;}
+.individualPalette{ display: none;}
+.eHighLight { background: rgb(213, 216, 216);}
+/*.eDragHighLighter { background: rgb(213, 216, 216); border: 0; opacity:0.4;}*/
+.eDragHighLighter { background: rgb(170, 173, 173); border: 0; opacity:0.4;}
+::-webkit-scrollbar {width: 12px;}
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background: -webkit-linear-gradient(top, #8bc7ef 1%,#4e87ca 100%); //rgba(18,120,168,0.8);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: -webkit-linear-gradient(top, #8bc7ef 1%,#4e87ca 100%); //rgba(18,120,168,0.4);
+}
+
+.field{
+	margin-bottom: 5px;
+}
+.context-menu-list {
+	max-width: 257px;
+}
+
+.recordName{
+	white-space: nowrap;
+	overflow: hidden;
+	word-wrap: break-word;
+	width: 192px;
+	display: inline-block;
+}
+
+.unitinfo{
+	display: inline-block;
+}
+
+.RVSR_unit_type_name {
+	text-align:left;
+	width: 55%;
+	word-break: break-all;
+}
+
+
+.RVSR_connect{		
+	position: absolute;	
+	width: auto;
+	//min-width: 240px;
+	height: 0px;
+	left: 45%;
+	z-index: 200;	
+	top: 4px;
+	text-align: center;
+	
+}	
+
+#RVSR_connectStatus{
+	border-color: #F0C36D;
+	background-color: #F9EDBE;
+	border: 1px solid transparent;
+	padding: 0px 10px;
+	top: 0%;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+	height: inherit;
+	display: inline;
+	font-size: 11px;
+	font-family: inherit;
+}
+
+.RVSR_tryLink{
+	display: relative;
+	float: right;
+	cursor: pointer;
+}
+
+.gridtopbar
+{
+	margin-top: 7px;
+}
+
+.top-height
+{
+	margin-top:5px;
+	margin-left:20px;
+}

@@ -1,0 +1,363 @@
+.modal-fullscreen {
+	width: calc(100% - 40px);
+}
+
+.modal-xlg {
+	width: 1024px;
+}
+
+.modal {
+	overflow: auto;
+}
+
+.backdrop {
+	position: fixed;
+	height: 100%;
+}
+
+.panel-heading input, .panel-heading select {
+	line-height: inherit;
+	color: black;
+	height: 20px;
+}
+
+	.panel-heading input[type=date] {
+		width: 130px;
+	}
+
+.form-inline .form-control {
+	display: block;
+}
+
+.ng-invalid.form-control {
+	border-color: red;
+}
+
+.reservation-card {
+}
+
+	.reservation-card .form-control {
+		line-height: 20px;
+		height: 24px;
+		padding: 0px;
+		margin-top: 0px;
+		margin-bottom: 4px;
+	}
+
+	.reservation-card .display {
+		padding: 7px 0px 7px 0px;
+	}
+
+	.reservation-card button {
+		height: 24px;
+	}
+
+	.products .input-small, .reservation-card .input-small {
+		width: 50px;
+	}
+
+	.products .Action, .reservation-card .Action {
+		width: 50px;
+		text-align: left;
+	}
+
+	.products .Name, .reservation-card .Name {
+		text-align: left;
+	}
+
+	.products .Quantity__c, .reservation-card .Quantity__c {
+		width: 50px;
+		text-align: right;
+	}
+
+	.products .Rate__c, .reservation-card .Rate__c {
+		width: 70px;
+		text-align: right;
+	}
+
+	.products .Discount_Amount__c, .reservation-card .Discount_Amount__c{
+		width: 70px;
+		text-align: right;
+	}
+
+	.products .Line_Total__c, .reservation-card .Line_Total__c {
+		width: 90px;
+		text-align: right;
+	}
+
+.Discount__c {
+    width: 90px !important;
+}
+
+.col-xs {
+	width: 50px;
+}
+
+.col-sm {
+	width: 100px;
+}
+
+.col-md {
+	width: 150px;
+}
+
+.col-lg {
+	width: 200px;
+}
+
+.col-xlg {
+	width: 250px;
+}
+
+.display {
+	text-align: right;
+}
+
+.panel-heading button {
+	-webkit-appearance: none;
+	cursor: pointer;
+	background: 0 0;
+	border: 0;
+	opacity: 0.6;
+	float: right;
+	font-weight: 700;
+	line-height: 1;
+	color: #000;
+	filter: alpha(opacity=20);
+}
+
+input[type=date] {
+	line-height: initial;
+}
+
+table.report {
+	width: 100%;
+}
+
+	table.report th {
+		font-weight: bold;
+		border: solid 1px #808080;
+	}
+
+	table.report th {
+		border: solid 1px #808080;
+	}
+
+	table.report td {
+		border: solid 1px #d4d2d2;
+	}
+
+		table.report td.amount {
+			text-align: right;
+		}
+
+		table.report td.textright {
+			text-align: right;
+		}
+
+		table.report td.red {
+			color: red;
+		}
+
+		table.report td.green {
+			color: green;
+		}
+
+.float-right {
+	float: right;
+}
+
+.resort-name {
+	float: left;
+	font-weight: bolder;
+	font-size: 20px;
+}
+
+.red {
+	color: red;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.right-align {
+	text-align: right;
+}
+
+.min-height-300 {
+	min-height: 300px;
+}
+
+
+.receiptView {
+	width: 100%;
+	height: 450px;
+}
+
+
+/*Salesforce CSS*/
+.apexp .bPageBlock.apexDefaultPageBlock .pbBody {
+	margin: 7px 12px 7px;
+}
+
+body .bPageBlock .pbBody {
+	padding: 0;
+}
+
+body .bPageBlock, body .bPageBlock .pbBody, body .bPageBlock .pbBottomButtons {
+	background-color: transparent;
+	background-image: none;
+	margin: 0;
+}
+
+.bPageBlock .pbBody {
+	margin-right: 2px;
+	padding: 6px 20px 4px 20px;
+	background-color: #f3f3ec;
+}
+
+.pbBody, .pbBody a, .pbBody td, .lbBody a, .lbBodyDescription, .list .headerRow .noRowsHeader {
+	color: #000;
+}
+
+.apexp .bPageBlock .detailList .list {
+	width: 100%;
+}
+
+body .bRelatedList .pbBody table.list, body .apexp .pbBody table.list {
+	border: 1px solid #e0e3e5;
+}
+
+body .pbBody table.list {
+	background-color: #fff;
+	border-top: 1px solid #e0e3e5;
+}
+
+.bPageBlock .list {
+	width: 100%;
+}
+
+body .bPageBlock, body #bodyCell .bResource .secondaryPalette, body .secondaryPalette.bPageBlock, body .individualPalette .secondaryPalette.bPageBlock, body .bodyDiv .genericTable, body .genericPageBlockTable, body .bodyDiv .bSubBlock, body .bComponentBlock .bPageBlock, body .bMyDashboard .bPageBlock, body.rlHoverFrame .bPageBlock, body.subjectSelectionPopup div.choicesBox, body.lookupTab .secondaryPalette.bPageBlock, body.popupTab .secondaryPalette.bPageBlock, body.UserTagStatsPage .secondaryPalette.bPageBlock {
+	background-color: #f8f8f8;
+	border-bottom: 1px solid #eaeaea;
+	border-left: 1px solid #eaeaea;
+	border-right: 1px solid #eaeaea;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+body .bPageBlock, body #bodyCell .bResource .secondaryPalette, body .secondaryPalette.bPageBlock, body .individualPalette .secondaryPalette.bPageBlock, body .bodyDiv .genericTable, body .genericPageBlockTable, body .bodyDiv .bSubBlock, body .bComponentBlock .bPageBlock, body .bMyDashboard .bPageBlock, body.rlHoverFrame .bPageBlock, body.subjectSelectionPopup div.choicesBox, body.lookupTab .secondaryPalette.bPageBlock, body.popupTab .secondaryPalette.bPageBlock, body.UserTagStatsPage .secondaryPalette.bPageBlock {
+	background-color: #f8f8f8;
+	border-bottom: 1px solid #eaeaea;
+	border-left: 1px solid #eaeaea;
+	border-right: 1px solid #eaeaea;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+body .bPageBlock {
+	padding: 0;
+	margin-bottom: 10px;
+	border-top-width: 3px;
+}
+
+	body .bPageBlock, body .bPageBlock .pbBody, body .bPageBlock .pbBottomButtons {
+		background-color: transparent;
+		background-image: none;
+		margin: 0;
+	}
+
+.bPageBlock {
+	border-top: 0;
+}
+
+.bPageBlock {
+	border-top: 4px solid #222;
+	margin-bottom: 9px;
+	background-color: #222;
+	background-image: url(/img/bgPageBlockLeft.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	padding-bottom: 9px;
+	clear: both;
+}
+
+body .bPageBlock .pbBody .dataCol {
+	border-right-color: transparent;
+}
+
+body .bPageBlock .pbBody .labelCol, body .bPageBlock .pbBody .dataCol, body .bPageBlock .pbBody .data2Col, body .print .topics-label, body .print .topics-list {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.bPageBlock .detailList .dataCol {
+	width: 32%;
+}
+
+body .bPageBlock .detailList tr td, body .bPageBlock .detailList tr th, body table.list tr td, body table.list tr th, body .hoverDetail .bPageBlock .detailList tr td, body .hoverDetail .bPageBlock .detailList tr th {
+	border-color: #7c7878;
+}
+
+body .bPageBlock .detailList tr td, body .bPageBlock .detailList tr th, body table.list tr td, body table.list tr th, body .hoverDetail .bPageBlock .detailList tr td, body .hoverDetail .bPageBlock .detailList tr th {
+	border-color: #7c7878;
+}
+
+body .bPageBlock .detailList tr td, body .bPageBlock .detailList tr th, body table.list tr td, body table.list tr th, body .hoverDetail .bPageBlock .detailList tr td, body .hoverDetail .bPageBlock .detailList tr th {
+	border-color: #ececec;
+}
+
+.bPageBlock .detailList tr td, .bPageBlock .detailList tr th, .hoverDetail .bPageBlock .detailList tr td, .hoverDetail .bPageBlock .detailList tr th {
+	border-bottom: 1px solid #e3deb8;
+}
+
+.bPageBlock .detailList th, .bPageBlock .detailList td {
+	vertical-align: top;
+}
+
+.bPageBlock .dataCol {
+	font-size: 11px;
+}
+
+.bPageBlock .dataCol {
+	font-size: 11px;
+}
+
+.bPageBlock .dataCol {
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	text-align: left;
+}
+
+.pbBody, .pbBody a, .pbBody td, .lbBody a, .lbBodyDescription, .list .headerRow .noRowsHeader {
+	color: #000;
+}
+
+.legend-size {
+    width:20px;
+    height:20px;
+    margin-right:5px;
+    display:inline-block;
+}
+.legend-bg-dirty {
+    background-color: #a3856b;
+}
+.legend-dialog-size {
+    width:250px;
+}
+.legend-service { background-color: rgb(219, 192, 204);}
+.legend-pencilin { background-color: rgb(219, 114, 190); }
+.legend-active {	background-color: #48a8f4; }
+.legend-checkedin {	background-color: rgb(62, 226, 62);}
+.legend-checkedout {	background-color: #D8EB75; }
+.legend-waitlisted {	background-color: #d3e4e9;}
+.legend-dirty{	 background-color: #a3856b;}
+
+.btn-color{
+	background-color: rgb(102, 167, 221);
+}

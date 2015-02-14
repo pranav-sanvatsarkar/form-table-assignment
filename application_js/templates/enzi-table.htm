@@ -1,0 +1,18 @@
+﻿<style>
+    .ng-invalid {
+        border-color: red;
+    }
+</style>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Actions</th>
+            <th ng-repeat="column in columns">{{column.label}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="record in records" enzi-row="record" columns="columns" fields="fields" fieldsmap="fieldsMap" columnsmap="columnsMap">
+            <td><a ng-click="editRecord(record)">Edit</a> | <a ng-click="deleteRecord(record)">Del</a> </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="../../favicon.ico">
+
+	<title>Dashboard Template for Bootstrap</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="css/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Attachments.expert Settings</a>
+			</div>
+			<!--<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Dashboard</a></li>
+					<li><a href="#">Settings</a></li>
+					<li><a href="#">Profile</a></li>
+					<li><a href="#">Help</a></li>
+				</ul>
+				<form class="navbar-form navbar-right">
+					<input type="text" class="form-control" placeholder="Search...">
+				</form>
+			</div>-->
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div id="sidebar" class="col-sm-3 col-md-2 sidebar">
+				<h5>Storage Servers</h5>
+				<ul class="nav nav-sidebar">
+					<li><a href="#/stroage/default">default</a></li>
+				</ul>
+				<h5>Settings</h5>
+				<ul class="nav nav-sidebar">
+					<li><a href="#/settings">Attachment Settings</a></li>
+				</ul>
+				<h5>Help</h5>
+				<ul class="nav nav-sidebar">
+					<li><a href="#/help/getstarted">Get Started</a></li>
+					<li><a href="#/help/setup">Salesforce Setup</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Storage Settings [{{$route.current.params.profile}}]</h3>
+					</div>
+					<div class="panel-body">
+						<form role="form">
+							<div class="form-group">
+								<label for="email">Email address:</label>
+								<select class="form-control" id="email"></select>
+							</div>
+							<div class="form-group">
+								<label for="pwd">Password:</label>
+								<input type="password" class="form-control" id="pwd">
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox"> Remember me</label>
+							</div>
+							<button type="submit" class="btn btn-default">Submit</button>
+						</form>
+					</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="../../vendor_js/jquery.min.js"></script>
+	<script src="../../vendor_js/bootstrap.min.js"></script>
+</body>
+</html>
