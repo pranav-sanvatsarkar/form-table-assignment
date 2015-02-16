@@ -6,8 +6,8 @@
             var field = $scope.fieldsmap[fieldName];
             var input = '<form name="inlineEdit">';
             switch (field.type) {
-                case 'textarea': input += '<textarea ng-blur="updateField(\'' + fieldName + '\')" type="' + field.type + '" ng-model="record[\'' + fieldName + '\']" ></textarea>'; break;
-                default: input += '<input ng-blur="updateField(\'' + fieldName + '\')" type="' + field.type + '" ng-model="record[\'' + fieldName + '\']" />'; break;
+                case 'textarea': input += '<textarea ng-blur="updateField(\'' + fieldName + '\')" type="' + field.type + '" ng-model="record[\'' + fieldName + '\']" class="form-control"></textarea>'; break;
+                default: input += '<input ng-blur="updateField(\'' + fieldName + '\')" type="' + field.type + '" ng-model="record[\'' + fieldName + '\']" class="form-control"/>'; break;
             }
             input += '</form>';
             input = angular.element(input);
@@ -56,7 +56,7 @@
                                     </div>\
                                     <div class="modal-body">';
                             angular.forEach(editFields, function (fieldName) {
-                                inputs += '<span enzi-field="' + fieldName + '"></span>';
+                                inputs += '<span enzi-field="' + fieldName + '"><label>'+fieldName+'</label></span>';
                             })
                             inputs += '   </div>\
                                     <div class="modal-footer">\
