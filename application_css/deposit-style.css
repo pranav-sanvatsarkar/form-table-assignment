@@ -1,0 +1,19 @@
+﻿.deposit-container {
+    width: 95%;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 1%;
+    margin: 2%;
+    text-align:center;
+}
+.deposit-innr-container {
+    width: 95%;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 1%;
+    margin: 1%;
+    display:inline-block
+}
+.deposit-rows {
+    text-align: center;
+}
